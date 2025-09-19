@@ -176,10 +176,10 @@ footer {
         bottom: 10px;
         left: 50%;
         transform: translateX(-50%);
-        font-size: 14px;        /* حجم مناسب للشاشة الصغيرة */
+        font-size: 8%;        /* حجم مناسب للشاشة الصغيرة */
         max-width: 90%;         /* يضمن بقاء النص ضمن عرض الخلفية */
         white-space: nowrap;    /* سطر واحد دائمًا */
-        overflow: hidden;       /* إخفاء أي نص خارج الحدود */
+              /* إخفاء أي نص خارج الحدود */
         text-overflow: clip;    /* يظهر النص كامل ضمن max-width بدون نقاط ... */
         z-index: 2;
     }
