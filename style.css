@@ -176,13 +176,14 @@ footer {
         bottom: 10px;
         left: 50%;
         transform: translateX(-50%);
-        font-size: 8%;        /* حجم مناسب للشاشة الصغيرة */
-        max-width: 90%;         /* يضمن بقاء النص ضمن عرض الخلفية */
-        white-space: nowrap;    /* سطر واحد دائمًا */
-              /* إخفاء أي نص خارج الحدود */
-        text-overflow: clip;    /* يظهر النص كامل ضمن max-width بدون نقاط ... */
+        font-size: clamp(10px, 4vw, 16px); /* حجم ديناميكي بين 10px و16px حسب عرض الشاشة */
+        max-width: 90%;                     /* يبقى داخل عرض الخلفية */
+        white-space: nowrap;                 /* سطر واحد */
+        overflow: hidden;                    /* لا يمتد خارج الخلفية */
+        text-overflow: clip;                 /* بدون نقاط ... */
         z-index: 2;
     }
+
     }
 
     /* Contact */
@@ -208,4 +209,3 @@ footer {
         text-align: right; 
         white-space: nowrap;    
     }
-}
