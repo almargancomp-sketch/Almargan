@@ -176,13 +176,13 @@ footer {
         bottom: 10px;
         left: 50%;
         transform: translateX(-50%);
-        font-size: clamp(12px, 4vw, 18px); /* حجم ديناميكي: 12px إلى 18px حسب عرض الشاشة */
-        color: #fff;
-        white-space: normal;  /* يسمح بالالتفاف إذا الشاشة ضيقة جدًا */
-        text-align: center;
+        font-size: 14px;        /* حجم مناسب للشاشة الصغيرة */
+        max-width: 90%;         /* يضمن بقاء النص ضمن عرض الخلفية */
+        white-space: nowrap;    /* سطر واحد دائمًا */
+        overflow: hidden;       /* إخفاء أي نص خارج الحدود */
+        text-overflow: clip;    /* يظهر النص كامل ضمن max-width بدون نقاط ... */
         z-index: 2;
-        max-width: 95%;       /* يضمن عدم خروج النص عن الشاشة */
-    }   
+    }
     }
 
     /* Contact */
