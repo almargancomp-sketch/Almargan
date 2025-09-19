@@ -172,11 +172,16 @@ footer {
     }
 
     .hero .sub-text {
-        font-size: 10px;      /* صغير جدًا ليبقى سطر واحد */
-        width: 95%;            
+        position: absolute;
+        bottom: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: clamp(10px, 2vw, 18px); /* حجم ديناميكي حسب الشاشة */
+        color: #fff;
         white-space: nowrap;  /* سطر واحد دائمًا */
-        overflow: hidden;     /* يمنع النص من الخروج */
-        text-overflow: ellipsis; /* يظهر "..." إذا النص طويل */
+        overflow: visible;    /* يظهر النص بالكامل */
+        z-index: 2;
+        
     }
 
     /* Contact */
@@ -191,7 +196,7 @@ footer {
     }
 
     .contact ul {
-        max-width: 200px;      /* جزء جانبي صغير */
+        max-width: none;      /* جزء جانبي صغير */
         margin-left: auto;     
         margin-right: 0;
         padding-left: 0;
@@ -199,6 +204,7 @@ footer {
 
     .contact ul li {
         font-size: 14px;       /* نصوص أصغر */
-        text-align: right;     
+        text-align: right; 
+        white-space: nowrap;    
     }
 }
