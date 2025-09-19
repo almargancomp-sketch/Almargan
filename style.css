@@ -156,24 +156,29 @@ footer {
 
 /* استجابة الهاتف */
 @media (max-width: 768px) {
+
+    /* Hero */
     .hero {
         height: 400px;
         padding: 20px;
     }
 
     .hero h1 {
-        font-size: 36px;
+        font-size: 28px;   /* أصغر ليتناسب مع الموبايل */
     }
 
     .hero p {
-        font-size: 18px;
+        font-size: 14px;   /* أصغر ليتناسب مع الموبايل */
     }
 
     .hero .sub-text {
-        font-size: 12px;      /* يصغر الخط ويبقى سطر واحد */
-        width: auto;          
+        font-size: 10px;      /* صغير جدًا ليبقى سطر واحد */
+        width: 95%;            
         white-space: nowrap;  /* سطر واحد دائمًا */
+        overflow: hidden;     /* يمنع النص من الخروج */
+        text-overflow: ellipsis; /* يظهر "..." إذا النص طويل */
     }
+
     /* Contact */
     .contact {
         padding: 40px 10px 20px 10px;  
@@ -181,20 +186,19 @@ footer {
     }
 
     .contact h2 {
-        font-size: 22px;
+        font-size: 20px;
         text-align: right;              
     }
 
     .contact ul {
-        max-width: 250px;      /* جزء جانبي على اليمين */
+        max-width: 200px;      /* جزء جانبي صغير */
         margin-left: auto;     
         margin-right: 0;
         padding-left: 0;
     }
 
     .contact ul li {
-        font-size: 16px;       /* نصوص أصغر على الموبايل */
+        font-size: 14px;       /* نصوص أصغر */
         text-align: right;     
     }
-
 }
